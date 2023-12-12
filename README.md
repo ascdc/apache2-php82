@@ -36,13 +36,13 @@
 
 要使用這個 Dockerfile 建立映像檔，您只需將 Dockerfile 存於本地目錄，然後在該目錄運行 Docker 建構指令。例如：
 ```
-docker build -t registry.ascdc.tw/apache2-php82 .
+docker build -t apache2-php82 .
 ```
-這將建立一個標籤為 `registry.ascdc.tw/apache2-php82` 的 Docker 映像檔。
+這將建立一個標籤為 `apache2-php82` 的 Docker 映像檔。
 
 若要運行該映像檔並啟動容器，您可以使用以下命令：
 ```
-docker run -d -p 80:80 registry.ascdc.tw/apache2-php82
+docker run -d -p 80:80 apache2-php82
 ``` 
 這將啟動一個容器並將主機的 80 埠映射到容器的 80 埠。您的 PHP 應用現應該可在瀏覽器透過 `http://localhost` 存取。
 
