@@ -46,17 +46,3 @@ docker run -d -p 80:80 apache2-php82
 ``` 
 這將啟動一個容器並將主機的 80 埠映射到容器的 80 埠。您的 PHP 應用現應該可在瀏覽器透過 `http://localhost` 存取。
 
-## PHP GeoIP
-模組使用範例
-```
-<?php
-
-require_once 'vendor/autoload.php';
-
-use GeoIp2\Database\Reader;
-
-$geoip = new Reader('/usr/share/GeoIP/GeoLite2-City.mmdb');
-$reader = $geoip->city('12.87.118.0');
-
-echo "I should be United States.... ".$reader->country->name."\n";
-```
